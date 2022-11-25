@@ -21,7 +21,9 @@
             </div>
             <div class="row mt-5">
                 <div class="col">
-                    <button type="button" class="btn btn-outline-primary welcome-button btn-lg">Get Started</button>
+                    <button type="button" onclick="window.location='{{ url('/login') }}'" class="btn btn-outline-primary welcome-button btn-lg">
+                        Get Started
+                    </button>
                 </div>
             </div>
         </div>
