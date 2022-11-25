@@ -1,0 +1,10 @@
+.welcome-button
+{
+    color: rgb(33, 47, 31) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.welcome-button:hover
+{
+    color: rgb(240, 240, 240) !important;
+}
