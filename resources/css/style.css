@@ -5,14 +5,10 @@ html
     height: 100% !important;
 } 
 
-.welcome-button
-{
-    transition: 0.3s ease-in-out !important;
-}
-
 .welcome-button:hover
 {
     color: rgb(240, 240, 240) !important;
+    transition: all 0.3s ease-in-out !important;
 }
 
 .overlay-element 
