@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="vh-100 container-fluid d-flex flex-column align-items-center justify-content-center shadow-lg">
+<div class="container-fluid d-flex flex-column align-items-center justify-content-center shadow-lg min-vh-100 pb-5" style="padding-top: 5rem;">
     <div class="container d-flex flex-column justify-content-center align-items-center" style="position: relative">
         <div class="col-md-1 shadow-lg overlay-element d-flex justify-content-center align-items-center" style="background-color: rgb(108, 99, 255); width: 5rem; height: 5rem; border-radius: 100%;">
             <img src="/assets/img/logo.png" class="img-fluid" alt="logo" width="50" height="50">
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-center mt-5">
-                            <button type="submit" class="btn btn-outline-primary" style="width: 20em">
+                            <button type="submit" class="btn btn-outline-primary welcome-button" style="width: 20em">
                                 {{ __('Login') }}
                             </button>
                         </div>
