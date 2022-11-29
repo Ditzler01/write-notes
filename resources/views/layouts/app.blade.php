@@ -25,7 +25,7 @@
             </div>
         </nav>
         
-        <div id="wrapper" class="wrapper d-flex flex-row m-0 min-vh-100 min-vw-100 position-absolute top-0">
+        <div id="wrapper" class="container-fluid ps-0 pe-0 d-flex flex-row m-0 min-vh-100 position-absolute top-0">
             {{-- SIDEBAR CONTAINER --}}
             <div id="sidebar" class="col-xxl-2 col-xl-3 col-lg-3 pt-4 vh-min-100 shadow-lg d-flex flex-column position-relative transition-anim" 
                 style="background-color: rgb(245, 245, 245);">
