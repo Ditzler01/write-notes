@@ -7,10 +7,20 @@
     </div> --}}
 
     <div class="container-fluid px-md-5 m-0 d-flex justify-content-md-evenly justify-content-center flex-row flex-wrap overflow-auto h-100 gap-3">
-        <div class="card mt-5 note-card" style="width: 20rem; height: 20rem; background-color: rgb(245, 245, 245);">
+        <div class="card mt-5 note-card" style="width: 20rem; height: 25rem; background-color: rgb(245, 245, 245);">
             <div class="card-body overflow-hidden mb-3">
                 <div class="container overflow-hidden">
-                    <h5 class="card-title">Card title</h5>
+                    <div class="container-fluid d-flex align-items-center flex-row justify-content-between p-0 mb-3">
+                        <h5 class="card-title text-center m-0">Card title</h5>
+                        <div class="col-auto d-flex flex-row gap-1">
+                            <div class="col-auto p-1 note-button-hover">
+                                <img src="/assets/icon/archive.png" alt="notebook" class="img-fluid" width="20" height="20">
+                            </div>
+                            <div class="col-auto p-1 note-button-hover">
+                                <img src="/assets/icon/trash.png" alt="notebook" class="img-fluid" width="20" height="20">
+                            </div>
+                        </div>
+                    </div> 
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
