@@ -3,7 +3,12 @@ html
     scroll-behavior: smooth;
     width: 100% !important;
     height: 100% !important;
-} 
+}
+
+.transition-anim
+{
+    transition: all 0.3s ease-in-out !important;
+}
 
 .welcome-button:hover
 {
@@ -18,4 +23,22 @@ html
     z-index: 1;
     left: 50%;
     margin-left: -5rem;
+}
+
+.hamburger-btn:hover
+{
+    transition: all 0.3s ease-in-out !important;
+    background-color: rgb(200, 200, 200) !important;
+}
+
+.sidebar-btn:hover
+{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out !important;
+    background-color: rgb(228, 228, 228) !important;
+}
+
+.note-card:hover
+{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
