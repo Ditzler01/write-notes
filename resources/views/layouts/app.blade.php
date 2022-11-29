@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <div id="content-pane" class="container-fluid p-0 m-0">
+            <div id="content-pane" class="container-fluid p-0 m-0 position-relative">
                 @yield('content')
             </div>
         </div>
