@@ -82,3 +82,29 @@ html
 {
     transform: scale(1.2);
 }
+
+.check-btn
+{
+    background: url('/public/assets/icon/check.svg') !important;
+}
+
+.color-btn
+{
+    cursor: pointer;
+    width: 50px; 
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.color-picker
+{
+    cursor: pointer;
+    width: 40px; 
+    height: 40px;
+    border: solid 1px rgb(100, 100, 100);
+}
+
+.color-btn:hover
+{
+    background-color: rgb(200, 200, 200);
+}

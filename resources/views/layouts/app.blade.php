@@ -80,5 +80,56 @@
                 @yield('content')
             </div>
         </div>
+
+        {{-- MODALS --}}
+
+        {{-- Add Modal --}}
+        <div class="modal fade" id="add-modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <div class="col w-100 d-flex flex-row align-items-center justify-content-end">
+                            <button type="button" class="btn-close m-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close btn-primary m-1 check-btn d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close"><img src="/assets/icon/check.png" alt="check" width="25" height="25"></button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is some placeholder content to show a vertically centered modal. We've added some extra copy here to show how vertically centering the modal works when combined with scrollable modals. We also use some repeated line breaks to quickly extend the height of the content, thereby triggering the scrolling. When content becomes longer than the prefedined max-height of modal, content will be cropped and scrollable within the modal.</p>
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <p>Just like that.</p>
+                    </div>
+                    <div class="modal-footer p-0">
+                        <div class="container-fluid d-flex flex-row align-items-center justify-content-evenly">
+                            <div class="color-btn round d-flex align-items-center justify-content-center p-0 m-0">
+                                <div class="color-picker round d-flex align-items-center justify-content-center">
+                                    <img src="/assets/icon/check.png" alt="check" width="25" height="25">
+                                </div>
+                            </div>
+                            <div class="color-btn round d-flex align-items-center justify-content-center p-0 m-0">
+                                <div class="color-picker round d-flex align-items-center justify-content-center">
+                                    <img src="/assets/icon/check.png" alt="check" width="25" height="25">
+                                </div>
+                            </div>
+                            <div class="color-btn round d-flex align-items-center justify-content-center p-0 m-0">
+                                <div class="color-picker round d-flex align-items-center justify-content-center">
+                                    <img src="/assets/icon/check.png" alt="check" width="25" height="25">
+                                </div>
+                            </div>
+                            <div class="color-btn round d-flex align-items-center justify-content-center p-0 m-0">
+                                <div class="color-picker round d-flex align-items-center justify-content-center">
+                                    <img src="/assets/icon/check.png" alt="check" width="25" height="25">
+                                </div>
+                            </div>
+                            <div class="color-btn round d-flex align-items-center justify-content-center p-0 m-0">
+                                <div class="color-picker round d-flex align-items-center justify-content-center">
+                                    <img src="/assets/icon/check.png" alt="check" width="25" height="25">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
