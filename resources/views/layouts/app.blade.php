@@ -46,38 +46,42 @@
             <div id="sidebar" class="col-xxl-2 col-xl-3 col-lg-3 pt-4 vh-min-100 shadow-lg d-flex flex-column position-relative transition-anim" 
                 style="background-color: rgb(245, 245, 245);">
                 {{-- SIDEBAR CONTENT --}}
-                <div class="container-fluid ps-5 sidebar-btn d-flex flex-row align-items-center py-3 justify-content-center justify-content-md-center justify-content-lg-start">
+                <a class="container-fluid ps-5 sidebar-btn d-flex flex-row align-items-center py-3 justify-content-center justify-content-md-center justify-content-lg-start"
+                    href="{{ route('home') }}" style="text-decoration: none; color: black;">
                     <div class="col-2">
                         <img src="/assets/icon/edit.png" class="img-fluid" alt="notes" width="25" height="25">
                     </div>
                     <div class="ps-3 col-4">
                         <span class="justify-content-center" style="font-size: 1em;">Notes</span>
                     </div>
-                </div>
-                <div class="container-fluid ps-5 sidebar-btn d-flex flex-row align-items-center py-3 justify-content-center justify-content-md-center justify-content-lg-start">
+                </a>
+                <a class="container-fluid ps-5 sidebar-btn d-flex flex-row align-items-center py-3 justify-content-center justify-content-md-center justify-content-lg-start"
+                    href="{{ url('archive') }}" style="text-decoration: none; color: black;">
                     <div class="col-2">
                         <img src="/assets/icon/archive.png" class="img-fluid" alt="archive" width="25" height="25">
                     </div>
                     <div class="ps-3 col-4">
                         <span class="justify-content-center" style="font-size: 1em;">Archive</span>
                     </div>
-                </div>
-                <div class="container-fluid ps-5 sidebar-btn d-flex flex-row align-items-center py-3 justify-content-center justify-content-md-center justify-content-lg-start">
+                </a>
+                <a class="container-fluid ps-5 sidebar-btn d-flex flex-row align-items-center py-3 justify-content-center justify-content-md-center justify-content-lg-start"
+                    href="{{ url('trash') }}" style="text-decoration: none; color: black;">
                     <div class="col-2">
                         <img src="/assets/icon/trash.png" class="img-fluid" alt="trash" width="25" height="25">
                     </div>
                     <div class="ps-3 col-4">
                         <span class="justify-content-center" style="font-size: 1em;">Trash</span>
                     </div>
-                </div>
-                <div class="container-fluid ps-5 sidebar-btn d-flex flex-row align-items-center py-3 justify-content-center justify-content-md-center justify-content-lg-start">
+                </a>
+                <a class="container-fluid ps-5 sidebar-btn d-flex flex-row align-items-center py-3 justify-content-center justify-content-md-center justify-content-lg-start"
+                    href="{{ url('profile') }}" style="text-decoration: none; color: black;">
                     <div class="col-2">
                         <img src="/assets/icon/profile.png" class="img-fluid" alt="profile" width="25" height="25">
                     </div>
                     <div class="ps-3 col-4">
                         <span class="justify-content-center" style="font-size: 1em;">Profile</span>
                     </div>
-                </div>
+                </a>
                 <div class="container-fluid ps-4 d-flex flex-row py-3 bottom-0 position-absolute">
                     <div class="col-auto d-flex align-items-center justify-content-center">
                         <img src="/assets/icon/logout.png" class="img-fluid" alt="logout" width="15" height="15">
