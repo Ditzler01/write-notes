@@ -35,6 +35,8 @@
     </div>
 
     <div class="position-absolute bottom-0 me-md-5 mb-md-5 me-3 mb-3" style="right: 0">
+        <div class="round p-3 custom-shadow add-note" style="background-color: rgb(250, 250, 250); height: 3.5rem; width: 3.5rem;">
+            <img src="/assets/icon/add.png" alt="add-note" class="img-fluid" height="100%" width="100%">
         </div>
     </div>
 @endsection
