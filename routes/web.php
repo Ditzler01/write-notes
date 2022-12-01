@@ -21,3 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/archive', function() { return view('pages.archive'); });
+Route::get('/trash', function() { return view('pages.trash'); });
+Route::get('/profile', function() { return view('pages.profile'); });
