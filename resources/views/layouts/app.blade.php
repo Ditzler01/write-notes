@@ -20,8 +20,24 @@
                     <p class="p-0 m-0" style="font-size: 30px; font-weight: 300;">Write</p>
                 </div>
             </div> 
-            <div class="pe-lg-5 pe-3">
-                <img src="/assets/svg/profile_male.svg" class="img-fluid shadow-sm" alt="logo" width="50" height="50" style="border-radius: 50%">
+            <div class="pe-lg-5 pe-3 d-sm-block d-none">
+                <button id="profile-dropdown" type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="/assets/svg/profile_male.svg" class="img-fluid shadow-sm" alt="profile_pic" width="50" height="50" style="border-radius: 100%">
+                </button>
+                <div class="container-fluid position-relative">
+                    <ul class="dropdown-menu position-absolute" style="left: -90px;" aria-labelledby="profile-dropdown">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="/assets/icon/profile.png" class="img me-4" alt="logout" width="15" height="15"> Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="/assets/icon/logout.png" class="img me-4" alt="logout" width="15" height="15"> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         
@@ -67,9 +83,13 @@
                         <img src="/assets/icon/logout.png" class="img-fluid" alt="logout" width="15" height="15">
                     </div>
                     <div class="ms-2 col-auto">
-                        <a class="btn btn-link justify-content-center" href="{{ url('/login') }}" style="font-size: 1em">
+                        <a class="btn btn-link justify-content-center" href="{{ route('logout') }}" onclick="event.preventDefault(); 
+                            document.getElementById('logout-form').submit();" style="font-size: 1em">
                             {{ __('Logout') }}
                         </a>
+                        <form id="logout-form" method="POST" action="{{ route('logout') }}" class="hidden">
+                            {{ csrf_field() }}
+                        </form>
                     </div>
                     <div class="col d-flex align-items-center justify-content-end pe-3" style="color: rgb(200, 200, 200)">
                         v 1.01
