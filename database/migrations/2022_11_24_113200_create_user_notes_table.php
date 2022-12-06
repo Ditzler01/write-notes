@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('user_notes', function (Blueprint $table) 
         {
-            $table->unsignedBigInteger('user_id');
-            $table->id();
+            $table->string('user_id')->unsigned();
+            $table->string('id')->primary();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('title');
         });
     }
 
