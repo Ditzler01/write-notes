@@ -108,3 +108,46 @@ html
 {
     background-color: rgb(200, 200, 200);
 }
+
+.note-form
+{
+    background-color: transparent !important;
+    padding-left: 0px !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 1.2em !important;
+}
+
+.note-text-area
+{
+    min-height: 40rem !important;
+    resize: none !important;
+}
+
+.scroll::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+}
+
+.scroll::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+}
+
+.scroll::-webkit-scrollbar-thumb:hover
+{
+    background: rgba(0,0,0,0.4);
+}
+
+.scroll::-webkit-scrollbar-thumb:hover
+{
+    background: rgba(112, 112, 112, 0.9);
+}
+
+.scroll::-webkit-scrollbar
+{
+    width: 3px;
+    height: 6px;    
+}

@@ -2,6 +2,8 @@ var content = document.getElementById('content-pane');
 var sidebar = document.getElementById('sidebar');
 var navbar = document.getElementById('navbar');
 var wrapper = document.getElementById('wrapper');
+var radioButtons = document.getElementsByClassName('form-check-input');
+var colorButtons = document.querySelectorAll('[alt="check"]');
 
 var isVisibleSidebar = true;
 var sidebarSize = sidebar.getBoundingClientRect().width;
@@ -65,5 +67,23 @@ window.onresize = () =>
         sidebar.style['transform'] = 'translateX(-' + (sidebarSize + 200) + 'px)';
 };
 
+//Check radio button on color click
+function changeColor(id, element)
+{
+    for (var i = 0; i < colorButtons.length; i++)
+    {
+        colorButtons[i].className = 'invisible';
+    }
+
+    //Radio button and color button
+    element.children[0].className = 'visible';
+    document.getElementById(id).checked = true;
+
+    //Modal color
+    document.getElementById('add-note-modal').style.backgroundColor = id;
+}
+
 //EVENT LISTENERS
 document.getElementById('hamburger').addEventListener('click', toggleSidebar);
+
+window.changeColor = changeColor;
