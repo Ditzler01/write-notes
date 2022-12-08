@@ -173,7 +173,7 @@
                             </div>
                         </div>
                         <div class="d-none">
-                            <input class="form-check-input" checked type="radio" name="color" id="#ffffff">
+                            <input class="form-check-input" checked type="radio" name="color" id="#ffffff" value="#ffffff">
                             <input class="form-check-input" type="radio" name="color" id="#8ae6a2" value="#8ae6a2">
                             <input class="form-check-input" type="radio" name="color" id="#fffe9c" value="#fffe9c">
                             <input class="form-check-input" type="radio" name="color" id="#9cc0ff" value="#9cc0ff">

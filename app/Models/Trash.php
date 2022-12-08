@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UserNote extends Model
+class Trash extends Model
 {
     use HasFactory;
     public $timestamps = false;
@@ -18,6 +18,7 @@ class UserNote extends Model
         'title',
         'note',
         'color',
-        'note_id'
+        'note_id',
+        'expiry_date'
     ];
 }

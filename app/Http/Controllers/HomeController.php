@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
-use App\Models\User;
 use App\Models\UserNote;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -17,28 +16,29 @@ class HomeController extends Controller
 
     public function addNote()
     {
-        $userNoteId = uniqid(time());
 
         UserNote::create(
         [
-            'id' => $userNoteId,
-            'user_id' => Auth::user()->id
-        ]);
-
-        Note::create(
-        [
+            'id' => uniqid(time()),
+            'user_id' => Auth::user()->id,
             'title' => request('title'),
             'note' => request('note'),
-            'color' => request('color'),
-            'note_id' => $userNoteId
+            'color' => request('color')
         ]);
 
         return redirect('home'); 
     }
 
+    public function moveToTrash($id)
+    {
+        
+    }
+
     public function home()
     {
-        return view('pages.home');
+        $notes = DB::table('user_notes')->where('user_id', Auth::user()->id)->get()->toArray();
+
+        return view('pages.home', ['notes' => $notes]);
     }
 
     public function archive()
