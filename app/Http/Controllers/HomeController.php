@@ -29,30 +29,10 @@ class HomeController extends Controller
         return redirect('home'); 
     }
 
-    public function moveToTrash($id)
-    {
-        
-    }
-
     public function home()
     {
-        $notes = DB::table('user_notes')->where('user_id', Auth::user()->id)->get()->toArray();
+        $notes = UserNote::all()->toArray();
 
         return view('pages.home', ['notes' => $notes]);
-    }
-
-    public function archive()
-    {
-        return view('pages.archive');
-    }
-
-    public function trash()
-    {
-        return view('pages.trash');
-    }
-
-    public function profile()
-    {
-        return view('pages.profile');
     }
 }
