@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_notes', function (Blueprint $table) 
+        Schema::create('archives', function (Blueprint $table) 
         {
             $table->string('user_id');
             $table->string('id')->primary();
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_notes');
+        Schema::dropIfExists('archive');
     }
 };

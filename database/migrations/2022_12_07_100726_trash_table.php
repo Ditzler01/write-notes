@@ -13,13 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('notes', function (Blueprint $table) 
+        Schema::create('trashes', function (Blueprint $table) 
         {
-            $table->string('note_id');
-            $table->foreign('note_id')->references('id')->on('user_notes');
+            $table->string('user_id');
+            $table->string('id')->primary();
+            $table->date('expiry_date');
             $table->string('title');
-            $table->string('note');
+            $table->longText('note');
             $table->string('color');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notes');
+        Schema::dropIfExists('trash');
     }
 };
