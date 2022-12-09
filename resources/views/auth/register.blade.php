@@ -54,7 +54,7 @@
                         @enderror
                     </div>
                     <div class="container d-flex flex-column p-0">
-                        <label for="email" class="col mx-5 col-form-label text-lg-start mt-3">{{ __('Password') }}</label>
+                        <label for="password" class="col mx-5 col-form-label text-lg-start mt-3">{{ __('Password') }}</label>
                     </div>
                     <div class="col mx-5">
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" autocomplete="new-password">

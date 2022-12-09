@@ -4,6 +4,8 @@ var navbar = document.getElementById('navbar');
 var wrapper = document.getElementById('wrapper');
 var radioButtons = document.getElementsByClassName('form-check-input');
 var colorButtons = document.querySelectorAll('[alt="check"]');
+var profilePicture = document.getElementById('profile-picture');
+var uploadPicture = document.getElementById('upload-img-hover');
 
 var isVisibleSidebar = true;
 var sidebarSize = sidebar.getBoundingClientRect().width;
@@ -83,7 +85,28 @@ function changeColor(id, element)
     document.getElementById('add-note-modal').style.backgroundColor = id;
 }
 
+//Profile hover
+function showUpload()
+{
+    profilePicture.classList.add('d-none');
+    uploadPicture.classList.remove('d-none');
+}
+
+function hideUpload()
+{
+    profilePicture.classList.remove('d-none');
+    uploadPicture.classList.add('d-none');
+}
+
+function upload()
+{
+    document.getElementById('choose-file-button').click();
+}
+
 //EVENT LISTENERS
 document.getElementById('hamburger').addEventListener('click', toggleSidebar);
 
 window.changeColor = changeColor;
+window.showUpload = showUpload;
+window.hideUpload = hideUpload;
+window.upload = upload;
