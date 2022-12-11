@@ -32,7 +32,21 @@ class HomeController extends Controller
     public function home()
     {
         $notes = UserNote::all()->toArray();
+        $user = Auth::user();
 
-        return view('pages.home', ['notes' => $notes]);
+        if ($user->profile_img != null)
+        {
+            $image = $user->profile_img;
+            $image = str_replace('data:image/png;base64,', '', $image);
+            $image = str_replace(' ', '+', $image);
+            $imageName = Auth::id() . '.' . 'png';
+            $path = public_path() . '/images/' . $imageName;
+
+            file_put_contents($path, base64_decode($image));
+
+            $user->profile_img = $imageName;
+        }
+
+        return view('pages.home', ['notes' => $notes, 'user' => $user]);
     }
 }
