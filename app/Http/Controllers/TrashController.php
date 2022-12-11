@@ -18,6 +18,20 @@ class TrashController extends Controller
     public function trash()
     {
         $notes = Trash::all()->toArray();
+        $user = Auth::user();
+
+        if ($user->profile_img != null)
+        {
+            $image = $user->profile_img;
+            $image = str_replace('data:image/png;base64,', '', $image);
+            $image = str_replace(' ', '+', $image);
+            $imageName = Auth::id() . '.' . 'png';
+            $path = public_path() . '/images/' . $imageName;
+
+            file_put_contents($path, base64_decode($image));
+
+            $user->profile_img = $imageName;
+        }
 
         //Delete trash if today's date is the expiry date
         foreach ($notes as $note)
@@ -28,7 +42,7 @@ class TrashController extends Controller
 
         $notes = Trash::all()->toArray();
 
-        return view('pages.trash', ['notes' => $notes]);
+        return view('pages.trash', ['notes' => $notes, 'user' => $user]);
     }
 
     public function restore($id)
