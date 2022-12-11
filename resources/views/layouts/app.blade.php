@@ -14,7 +14,7 @@
                     <button id="hamburger" class="btn hamburger-btn" type="button">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <img src="/assets/img/note.png" class="img-fluid ps-lg-2" alt="logo" width="50" height="50">
+                    <img src="/assets/img/logo.png" class="img-fluid ps-lg-2" alt="logo" width="50" height="50">
                 </div>
                 <div class="col-sm-4 d-flex flex-row justify-content-center align-items-center">
                     <p class="p-0 m-0" style="font-size: 30px; font-weight: 300;">Write</p>
@@ -22,17 +22,22 @@
             </div> 
             <div class="pe-lg-5 pe-3 d-sm-block d-none">
                 <button id="profile-dropdown" type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/assets/svg/profile_male.svg" class="img-fluid shadow-sm" alt="profile_pic" width="50" height="50" style="border-radius: 100%">
+                    <div class="custom-shadow"
+                        style="border-radius: 100%; overflow: hidden;">
+                        <img src="/images/{{ $user->profile_img }}" width="50rem" height="50rem" 
+                            alt="profile-picture" style="object-fit: contain;">
+                    </div>
                 </button>
                 <div class="container-fluid position-relative">
                     <ul class="dropdown-menu position-absolute" style="left: -90px;" aria-labelledby="profile-dropdown">
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="/profile">
                                 <img src="/assets/icon/profile.png" class="img me-4" alt="logout" width="15" height="15"> Profile
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); 
+                            document.getElementById('logout-form').submit();">
                                 <img src="/assets/icon/logout.png" class="img me-4" alt="logout" width="15" height="15"> Logout
                             </a>
                         </li>
