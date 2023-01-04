@@ -7,7 +7,7 @@
             <div class="overlay-element d-flex justify-content-center align-items-center shadow" 
                 style="background-color: rgb(245, 245, 245); width: 15rem; height: 15rem; border-radius: 100%; margin-left: -15rem;">    
                     @if ($user->profile_img == null)
-                        <img id="profile-picture" onmouseover="showUpload()" src="/assets/svg/default_profile.svg" class="custom-shadow" alt="profile-picture" width="200rem" height="200rem" style="border-radius: 100%;">
+                        <img id="profile-picture" onmouseover="showUpload()" src="/assets/svg/profile_male.svg" class="custom-shadow" alt="profile-picture" width="200rem" height="200rem" style="border-radius: 100%;">
                     @else
                     <div id="profile-picture" class="custom-shadow" onmouseover="showUpload()" 
                         style="border-radius: 100%; overflow: hidden;">

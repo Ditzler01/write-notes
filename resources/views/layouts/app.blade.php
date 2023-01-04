@@ -24,8 +24,13 @@
                 <button id="profile-dropdown" type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false">
                     <div class="custom-shadow"
                         style="border-radius: 100%; overflow: hidden;">
+                        @if ($user->profile_img == null)
+                            <img src="/assets/svg/profile_male.svg" width="50rem" height="50rem" 
+                                alt="profile-picture" style="object-fit: contain;">
+                        @else
                         <img src="/images/{{ $user->profile_img }}" width="50rem" height="50rem" 
-                            alt="profile-picture" style="object-fit: contain;">
+                        alt="profile-picture" style="object-fit: contain;">
+                        @endif
                     </div>
                 </button>
                 <div class="container-fluid position-relative">
