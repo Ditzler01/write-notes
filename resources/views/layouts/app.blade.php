@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Write Notes</title>
-        @vite(['resources/css/style.css', 'resources/js/app.js', 'resources/js/home.js'])
+        @vite(['resources/sass/style.scss', 'resources/js/app.js', 'resources/js/home.js'])
     </head>
     <body class="min-vh-100">
         <nav id="navbar" class="navbar m-0 py-2" style="border: solid 1px rgb(220, 220, 220); z-index: 5; background-color: rgb(250, 250, 250);">

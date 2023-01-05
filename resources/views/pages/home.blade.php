@@ -7,7 +7,7 @@
             <img src="/assets/svg/add_note.svg" alt="notebook" class="img-fluid" width="500" height="500">
         </div>
     @else    
-        <div class="container-fluid m-0 d-flex justify-content-md-evenly justify-content-center flex-row flex-wrap overflow-auto h-100 gap-3">
+        <div class="container-fluid m-0 d-flex justify-content-center flex-row flex-wrap overflow-auto h-100 gap-3">
             @foreach ($notes as $note)
                 <div class="card mt-5 note-card" style="min-width: 20rem; max-width: 20rem; height: 25rem; background-color: {{ $note['color'] }};">
                     <div class="card-body overflow-hidden mb-3">
