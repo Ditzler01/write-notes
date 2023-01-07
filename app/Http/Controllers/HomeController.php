@@ -29,6 +29,18 @@ class HomeController extends Controller
         return redirect('home'); 
     }
 
+    public function updateNote($id)
+    {
+        
+        UserNote::where('id', $id)->update([
+            'title' => request('title'), 
+            'note' => request('note'),
+            'color' => request('color')
+        ]);
+        
+        return redirect('home'); 
+    }
+
     public function home()
     {
         $notes = UserNote::all()->toArray();

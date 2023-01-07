@@ -69,7 +69,7 @@ window.onresize = () =>
         sidebar.style['transform'] = 'translateX(-' + (sidebarSize + 200) + 'px)';
 };
 
-//Check radio button on color click
+//Check radio button on color click add note
 function changeColor(id, element)
 {
     for (var i = 0; i < colorButtons.length; i++)
@@ -83,6 +83,22 @@ function changeColor(id, element)
 
     //Modal color
     document.getElementById('add-note-modal').style.backgroundColor = id;
+}
+
+//Check radio button on color click add note
+function changeColorUpdate(id, element)
+{
+    for (var i = 0; i < colorButtons.length; i++)
+    {
+        colorButtons[i].className = 'invisible';
+    }
+
+    //Radio button and color button
+    element.children[0].className = 'visible';
+    document.getElementById(id + 'u').checked = true;
+
+    //Modal color
+    document.getElementById('update-note-modal').style.backgroundColor = id;
 }
 
 //Profile hover
@@ -103,10 +119,13 @@ function upload()
     document.getElementById('choose-file-button').click();
 }
 
+
+
 //EVENT LISTENERS
 document.getElementById('hamburger').addEventListener('click', toggleSidebar);
 
 window.changeColor = changeColor;
+window.changeColorUpdate = changeColorUpdate;
 window.showUpload = showUpload;
 window.hideUpload = hideUpload;
 window.upload = upload;
