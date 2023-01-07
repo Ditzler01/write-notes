@@ -25,3 +25,4 @@ Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 //POST
 Route::post('/add-note', [HomeController::class, 'addNote'])->name('add-note');
 Route::post('/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
+Route::post('/update-note/{id}', [HomeController::class, 'updateNote'])->name('update-note');
